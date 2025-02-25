@@ -4,8 +4,6 @@
   padding-top: 14.6rem;
   padding-bottom: 14rem;
   position: relative;
-  background: var(--primary-dark-blue);
-  color: var(--white);
 
   @include onTablet {
     padding-top: 17rem;
@@ -13,30 +11,6 @@
 
   @include onLaptop {
     padding-top: 20rem;
-  }
-}
-
-.heroBg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 0;
-  background-image: url('../../../../assets/Homepage/hero-mob-bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @include onTablet {
-    background-image: url('../../../../assets/Homepage/hero-tablet-bg.png');
-  }
-
-  @include onLaptop {
-    background-image: url('../../../../assets/Homepage/hero-laptop-bg.svg');
-  }
-
-  @include onMediumDesktop {
-    background-image: url('../../../../assets/Homepage/hero-desk-bg.svg');
   }
 }
 

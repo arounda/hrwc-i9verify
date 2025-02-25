@@ -6,17 +6,13 @@ import s from './headerNavigation.module.scss';
 const StyledSpan = styled.span`
   font-size: 1.6rem;
   font-weight: 500;
-  color: ${({ $isHeaderWhite, $isHome }) => (
-    $isHeaderWhite || !$isHome ? 'var(--dark)' : 'var(--white)'
-  )};
+  color: 'var(--dark)';
   transition: all var(--btn-hover-transition);
 `;
 
 const HeaderNavigation = ({
   isMenuOpen,
   onMenuOpen,
-  isHeaderWhite,
-  isHome
 }) => {
   return (
     <nav className={s.headerNav}>
@@ -27,10 +23,7 @@ const HeaderNavigation = ({
             className={s.headerNavListItem}
           >
             <Link href={item.url}>
-              <StyledSpan
-                $isHeaderWhite={isHeaderWhite}
-                $isHome={isHome}
-              >
+              <StyledSpan>
                 {item.title}
               </StyledSpan>
             </Link>

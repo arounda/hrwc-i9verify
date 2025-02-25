@@ -4,14 +4,7 @@
   position: fixed;
   width: 100%;
   z-index: 50;
-}
-
-.headerBg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
   background-color: rgb(255, 255, 255);
-  transition: all 500ms;
 }
 
 .headerWrapper {

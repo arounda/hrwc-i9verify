@@ -1,27 +1,20 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import s from './header.module.scss';
+import logoBlack from '@/assets/header-logo-black.svg';
 import { clientLoginUrl, newHireLoginUrl } from '@/constants/mainURLs';
-import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import ButtonSecondary from '../ButtonSecondary/ButtonSecondary';
 import Burger from './Burger/Burger';
-import HeaderLogo from './HeaderLogo/HeaderLogo';
+import s from './header.module.scss';
 import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 
-const whiteHeroPages = [
-  '/about-us',
-  '/contact-us',
-  '/policies/privacy-policy',
-  '/policies/terms',
-];
 
 const Header = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
   const [ isHeaderWhite, setIsHeaderWhite ] = useState(false);
-  const pathname = usePathname();
-  const isHeroWhite = !whiteHeroPages.includes(pathname);
 
   useEffect(() => {
     if (window.scrollY > 50) {
@@ -30,7 +23,7 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [ isHeroWhite ]);
+  }, [ isHeaderWhite ]);
 
   function handleScroll() {
     if (window.scrollY < 50) {
@@ -63,34 +56,32 @@ const Header = () => {
     >
       <div className="container">
         <div className={s.headerWrapper}>
-          <HeaderLogo
-            isHeaderWhite={isHeaderWhite}
-            isHome={isHeroWhite}
-          />
+          <Link href='/'>
+            <Image
+              className='logoBlack'
+              src={logoBlack}
+              alt=''
+              priority
+            />
+          </Link>
 
           <div className={s.headerMain}>
             <HeaderNavigation
               isMenuOpen={isMenuOpen}
               onMenuOpen={handleMenuOpen}
-              isHeaderWhite={isHeaderWhite}
-              isHome={isHeroWhite}
             />
 
             <div className={s.headerCTAs}>
               <ButtonSecondary
                 text='Client Login'
                 link={clientLoginUrl}
-                isHeaderWhite={isHeaderWhite}
-                isHome={isHeroWhite}
                 isHeader={true}
                 istargetBlank={true}
               />
 
               <ButtonPrimary
-                text='Schedule Demo'
+                text='Sign In'
                 link={newHireLoginUrl}
-                isHeaderWhite={isHeaderWhite}
-                isHome={isHeroWhite}
                 isHeader={true}
                 istargetBlank={true}
               />
@@ -100,20 +91,11 @@ const Header = () => {
               <Burger
                 isMenuOpen={isMenuOpen}
                 onMenuOpen={handleMenuOpen}
-                isHeaderWhite={isHeaderWhite}
-                isHome={isHeroWhite}
               />
             </div>
           </div>
         </div>
       </div>
-
-      <div
-        className={s.headerBg}
-        style={{
-          opacity: `${isHeaderWhite ? '1' : '0'}`,
-        }}
-      ></div>
     </header>
   )
 };

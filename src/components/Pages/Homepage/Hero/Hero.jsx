@@ -10,22 +10,21 @@ const Hero = () => {
         <div className={s.heroWrapper}>
           <div className={s.heroMain}>
             <h1 className='heading-h1 is-centered'>
-              Discover Hidden Tax Savings for Your Business
+              SaaS for I-9 & E-Verify Compliance
             </h1>
 
             <p className={s.heroText}>
-              Leverage federal and state tax credit programs to reduce costs and grow smarter.
+              Stay ahead of compliance challenges with a solution built for efficiency and accuracy.
             </p>
 
             <ButtonPrimary
-              text='Start Saving'
+              text='Learn More'
               link='/contact-us'
+              isButtonBlue={true}
             />
           </div>
         </div>
       </div>
-
-      <div className={s.heroBg} />
     </section>
   )
 };

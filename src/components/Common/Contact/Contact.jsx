@@ -13,15 +13,15 @@ const Contact = () => {
               className={`heading-h2 is-centered is-white`}
               id={s.contactHeading}
             >
-              Contact Our Team
+              Start Saving Today
             </h2>
 
             <p className={`text is-centered is-white ${s.contactSubtitle}`}>
-              Complete our contact form and our team will get back to you as quickly as we can.
+              Schedule a demo or contact us to learn how we can help your business thrive.
             </p>
 
             <ButtonPrimary
-              text='Contact Us'
+              text='Schedule a Free Consultation'
               link='/contact-us'
             />
           </div>

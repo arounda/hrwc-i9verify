@@ -2,7 +2,7 @@ import s from './trustedPartner.module.scss';
 
 const TrustedPartner = () => {
   return (
-    <section className="section">
+    <section className="section is-padding-block">
       <div className="container">
         <div className={s.partnerWrapper}>
           <div className={s.parnterMain}>

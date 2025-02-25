@@ -6,8 +6,8 @@ export const navLinks = [
   },
   {
     id: 'ns2',
-    title: 'WOTC Calculator',
-    url: '/wotc-calculator',
+    title: 'Pricing',
+    url: '/pricing',
   },
   {
     id: 'ns3',

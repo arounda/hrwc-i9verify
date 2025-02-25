@@ -1,22 +1,22 @@
 @import '@/styles/utils/mixins';
 
 .contact {
-  background: var(--primary-dark-blue);
-  background-image: url('../../../assets/Homepage/contact-bg-mob.png');
+  background: var(--primary);
+  // background-image: url('../../../assets/Homepage/contact-bg-mob.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include onTablet {
-    background-image: url('../../../assets/Homepage/contact-bg-tablet.png');
+    // background-image: url('../../../assets/Homepage/contact-bg-tablet.png');
   }
 
   @include onLaptop {
-    background-image: url('../../../assets/Homepage/contact-bg-laptop.png');
+    // background-image: url('../../../assets/Homepage/contact-bg-laptop.png');
   }
 
   @include onLargeDesktop {
-    background-image: url('../../../assets/Homepage/contact-bg-desktop.png');
+    // background-image: url('../../../assets/Homepage/contact-bg-desktop.png');
   }
 }
 
