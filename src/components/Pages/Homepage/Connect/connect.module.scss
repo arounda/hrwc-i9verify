@@ -1,58 +1,27 @@
 @import '@/styles/utils/mixins';
 
 .connectWrapper {
-  position: relative;
-  width: 100%;
-  padding: 8rem 3.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  border-radius: 24px;
-  overflow: hidden;
-
-  @include onTablet {
-    padding-block: 11.4rem;
-  }
-
-  @include onLaptop {
-    padding: 9rem 4rem;
-    flex-direction: row-reverse;
-  }
-
-  @include onLargeDesktop {
-    padding: 14.6rem 8rem;
-  }
-}
-
-.connectBg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(105deg, #242BFF 15.02%, #2F0092 109.42%);
-}
-
-.connectMain {
+  padding: 6rem 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 24px;
+  background-color: var(--light-blue);
 
-  @include onLaptop {
-    align-items: flex-start;
-    justify-content: center;
+  @include onTablet {
+    padding-inline: 3.2rem;
   }
-}
 
-#connectHeading {
   @include onLaptop {
-    text-align: left;
+    padding: 8.4rem 4rem;
+  }
+
+  @include onLargeDesktop {
+    padding-block: 9.4rem;
   }
 }
 
 .connectSubtitle {
   margin-top: .8rem;
   margin-bottom: 3.2rem;
-
-  @include onLaptop {
-    text-align: left;
-  }
 }

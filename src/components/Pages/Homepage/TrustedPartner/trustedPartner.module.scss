@@ -5,10 +5,6 @@
   flex-direction: column;
   gap: 6rem;
 
-  @include onLaptop {
-    flex-direction: row;
-  }
-
   @include onLargeDesktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -18,11 +14,17 @@
 .parnterMain {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2.4rem;
 
   @include onLaptop {
     justify-content: space-between;
   }
+}
+
+.partnerMainTop {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
 .partnerMainBottom {
@@ -66,15 +68,8 @@
 }
 
 .partnerCard {
-  display: grid;
-  column-gap: 1.2rem;
-  row-gap: .8rem;
-  align-items: center;
-  grid-template-columns: 24px 1fr;
-
-  @include onTablet {
-    display: block;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .partnerCardsSeparatorMob {
@@ -112,29 +107,24 @@
 }
 
 .partnerIconWrapper {
-  @include onTablet {
-    display: grid;
-    place-items: center;
-    width: 52px;
-    height: 52px;
-    padding: 1.2rem;
-    background-color: var(--white);
-    border-radius: 16px;
-    box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
-  }
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 1.2rem;
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
 }
 
 .partnerHeading {
+  margin-top: 2.4rem;
+  margin-bottom: .8rem;
   color: var(--black);
   font-family: var(--font-gilroy);
   font-size: 2rem;
   font-weight: 600;
   line-height: 150%;
-
-  @include onTablet {
-    margin-top: 2.4rem;
-    margin-bottom: .8rem;
-  }
 }
 
 .partnerText {

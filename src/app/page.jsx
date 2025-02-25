@@ -1,5 +1,4 @@
 import Contact from '@/components/Common/Contact/Contact';
-import Mission from '@/components/Common/Mission/Mission';
 import Connect from '@/components/Pages/Homepage/Connect/Connect';
 import Hero from '@/components/Pages/Homepage/Hero/Hero';
 import Tour from '@/components/Pages/Homepage/Tour/Tour';
@@ -14,11 +13,9 @@ export default function Home() {
 
         <TrustedPartner />
 
-        {/* <Connect /> */}
+        <Tour />
 
-        {/* <Tour /> */}
-
-        {/* <Mission /> */}
+        <Connect />
 
         <Contact />
       </HeaderFooterView>

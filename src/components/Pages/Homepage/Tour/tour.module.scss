@@ -5,10 +5,14 @@
   flex-direction: column;
   gap: 4rem;
 
+  @include onTablet {
+    gap: 6rem;
+  }
+
   @include onMediumDesktop {
+    gap: 8rem;
     flex-direction: row;
     align-items: center;
-    gap: 8rem;
   }
 }
 
@@ -21,6 +25,15 @@
 .tabsSubHeading {
   margin-top: .8rem;
   margin-bottom: 3.2rem;
+}
+
+.tabs h2,
+.tabsSubHeading {
+  text-align: center;
+
+  @include onMediumDesktop {
+    text-align: left;
+  }
 }
 
 .tabsBtns {

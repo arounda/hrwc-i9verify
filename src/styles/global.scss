@@ -21,7 +21,6 @@
   --dark-v2: #0B0B13;
 
   //use here
-  // --primary-dark-blue: #200093;
 
   --btn-hover-transition: 250ms;
 }
@@ -54,17 +53,17 @@ main {
     padding-top: 16rem;
   }
 
-  &.is-light-blue {
-    background-color: var(--light-blue);
-  }
+  // &.is-light-blue {
+  //   background-color: var(--light-blue);
+  // }
 
-  &.is-gradient-bg {
-    background: linear-gradient(0deg, #FFF 7.66%, #F1F8FF 96%);
-  }
+  // &.is-gradient-bg {
+  //   background: linear-gradient(0deg, #FFF 7.66%, #F1F8FF 96%);
+  // }
 
-  &.is-gradient-v2 {
-    background: linear-gradient(326deg, #242BFF 0%, #2624F0 16.61%, #291EE3 31.45%, #2B17D3 48.08%, #3300A1 78.09%);
-  }
+  // &.is-gradient-v2 {
+  //   background: linear-gradient(326deg, #242BFF 0%, #2624F0 16.61%, #291EE3 31.45%, #2B17D3 48.08%, #3300A1 78.09%);
+  // }
 
   &.is-padding-block {
     padding-block: 10rem;
@@ -267,35 +266,16 @@ main {
   }
 }
 
-.heroCardTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// .heroCardTop {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 
-.heroCardIconWrapper {
-  // width: 52px;
-  // height: 52px;
-  // display: grid;
-  // place-items: center;
-  // background-color: var(--white);
-  // border-radius: 16px;
-  margin-bottom: 1.2rem;
-}
+// .heroCardIconWrapper {
+//   margin-bottom: 1.2rem;
+// }
 
-.heroCardIconWrapper path {
-  stroke: white;
-}
-
-// Team page slider pagination
-.teamPagination {
-  display: flex;
-  gap: 12px;
-
-  & .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    margin: 0 !important;
-    background-color: var(--primary);
-  }
-}
+// .heroCardIconWrapper path {
+//   stroke: white;
+// }
