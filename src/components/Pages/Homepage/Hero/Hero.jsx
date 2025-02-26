@@ -11,15 +11,15 @@ const Hero = () => {
       <div className="container">
         <div className={s.heroMain}>
           <h1 className='heading-h1 is-centered'>
-            SaaS for I-9 & E-Verify Compliance
+            Streamlined I-9 & E-Verify Compliance
           </h1>
 
           <p className={s.heroText}>
-            Stay ahead of compliance challenges with a solution built for efficiency and accuracy.
+            Stay ahead of the curve with our intuitive platform that makes I-9 and E-Verify easy, efficient, and stress-free. Compliance has never been this simple.
           </p>
 
           <ButtonPrimary
-            text='Learn More'
+            text='Get Started'
             link='/contact-us'
             isButtonBlue={true}
           />

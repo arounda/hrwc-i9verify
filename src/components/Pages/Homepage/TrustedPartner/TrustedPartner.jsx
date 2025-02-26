@@ -2,16 +2,19 @@ import s from './trustedPartner.module.scss';
 
 const TrustedPartner = () => {
   return (
-    <section className="section is-padding-block">
+    <section className="section">
       <div className="container">
         <div className={s.partnerWrapper}>
           <div className={s.parnterMain}>
             <div className={s.partnerMainTop}>
               <h2 className='heading-h2'>
-                Your Trusted Partner in Tax Savings
+                Why Choose ei9verify?
               </h2>
+              <h3 className='heading-h4'>
+                Streamlined, Accurate, and Compliance-Ready
+              </h3>
               <p className='text'>
-                We specialize in helping businesses of all sizes unlock valuable tax incentives. From Work Opportunity Tax Credit (WOTC) and Federal Empowerment (EZ) credits to state and local programs, our tailored solutions ensure you claim every dollar you`re entitled to.
+                ei9verify simplifies I-9 and E-Verify processes, ensuring your business stays ahead of compliance requirements with a streamlined, secure solution.
               </p>
             </div>
 
@@ -51,11 +54,11 @@ const TrustedPartner = () => {
               </div>
 
               <h3 className={s.partnerHeading}>
-                Comprehensive Coverage
+                Automated Compliance
               </h3>
 
               <p className={s.partnerText}>
-                We identify and secure tax credits, including hiring, payroll, and location-based incentives.
+                Simplify the entire process with automated workflows that ensure compliance with the latest I-9 and E-Verify regulations.
               </p>
             </div>
 
@@ -69,11 +72,11 @@ const TrustedPartner = () => {
               </div>
 
               <h3 className={s.partnerHeading}>
-                Simplified or Streamlined Process
+                Real-Time Verification
               </h3>
 
               <p className={s.partnerText}>
-                We manage pre-screening, filing, and compliance for you.
+                Validate employee eligibility instantly, minimizing delays and ensuring compliance with confidence.
               </p>
             </div>
 
@@ -87,11 +90,11 @@ const TrustedPartner = () => {
               </div>
 
               <h3 className={s.partnerHeading}>
-                Expert Guidance
+                Fast, Easy Setup
               </h3>
 
               <p className={s.partnerText}>
-                Decades of experience navigating tax credit regulations.
+                Get up and running quickly with an intuitive self- service enrollment and guided workflows designed to simplify the process.
               </p>
             </div>
 
@@ -104,10 +107,12 @@ const TrustedPartner = () => {
                 </svg>
               </div>
 
-              <h3 className={s.partnerHeading}>Proven Results</h3>
+              <h3 className={s.partnerHeading}>
+                API Integration & Self-Service Models
+              </h3>
 
               <p className={s.partnerText}>
-                Trusted by businesses across industries to recover millions in credits. or  Millions in tax savings secured for businesses like yours.
+                Choose between seamless API integration for large-scale operations or a user-friendly self-service model to start quickly without extra resources.
               </p>
             </div>
 

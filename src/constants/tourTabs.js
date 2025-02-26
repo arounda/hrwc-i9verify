@@ -6,20 +6,20 @@ import tour3 from '@/assets/Homepage/tour3.png';
 export const tourTabs = [
   {
     id: 't1',
-    title: 'Intuitive Design',
-    text: 'Easy-to-navigate interface for a seamless user experience.',
+    title: 'Intuitive Dashboard',
+    text: 'Manage I-9 forms and E-Verify cases effortlessly with a centralized dashboard that provides real-time insights into your compliance status.',
     image: tour1,
   },
   {
     id: 't2',
-    title: 'Time-Saving Automation',
-    text: 'Streamline processes to reduce manual tasks.',
+    title: 'Guided Form Completion',
+    text: 'Simplify onboarding with intelligent, step-by-step guidance that minimizes errors and ensures accuracy on every I-9 form.',
     image: tour2,
   },
   {
     id: 't3',
-    title: 'Comprehensive Features',
-    text: 'Manage all HR needs in one platform.',
+    title: 'Audit-Ready Records',
+    text: 'Keep your compliance data organized and accessible with secure digital storage, making audits stress-free and straightforward.',
     image: tour3,
   },
 ];

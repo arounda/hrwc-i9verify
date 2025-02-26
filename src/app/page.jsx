@@ -1,4 +1,5 @@
 import Contact from '@/components/Common/Contact/Contact';
+import Compliance from '@/components/Pages/Homepage/Compliance/Compliance';
 import Connect from '@/components/Pages/Homepage/Connect/Connect';
 import Hero from '@/components/Pages/Homepage/Hero/Hero';
 import Tour from '@/components/Pages/Homepage/Tour/Tour';
@@ -12,6 +13,8 @@ export default function Home() {
         <Hero />
 
         <TrustedPartner />
+
+        <Compliance />
 
         <Tour />
 

@@ -1,0 +1,27 @@
+@import '@/styles/utils/mixins';
+
+.complianceWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.complianceImageMob,
+.complianceImageDesk {
+  width: 100%;
+  height: auto;
+}
+
+.complianceImageMob {
+  @include onLaptop {
+    display: none;
+  }
+}
+
+.complianceImageDesk {
+  display: none;
+
+  @include onLaptop {
+    display: block;
+  }
+}

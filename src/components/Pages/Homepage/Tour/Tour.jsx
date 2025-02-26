@@ -20,11 +20,11 @@ const Tour = () => {
         <div className={s.tabs}>
           <div className={s.tabsTop}>
             <h2 className='heading-h2'>
-              Tour Our Platform
+              Your Compliance Solution, Simplified
             </h2>
 
             <p className={`text ${s.tabsSubHeading}`}>
-              See how our user-friendly interface and powerful features simplify HR management and enhance your workflow.
+              Our platform combines advanced technology with an intuitive interface to streamline every step of the I-9 and E-Verify process.
             </p>
 
             <div className={s.tabsBtns}>

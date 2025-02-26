@@ -13,15 +13,15 @@ const Contact = () => {
               className={`heading-h2 is-centered is-white`}
               id={s.contactHeading}
             >
-              Start Saving Today
+              Streamline Your I-9 & E-Verify Process Today
             </h2>
 
             <p className={`text is-centered is-white ${s.contactSubtitle}`}>
-              Schedule a demo or contact us to learn how we can help your business thrive.
+              Let’s get you set up with the easiest compliance platform.
             </p>
 
             <ButtonPrimary
-              text='Schedule a Free Consultation'
+              text='Get Started Now | Request a Demo'
               link='/contact-us'
             />
           </div>
