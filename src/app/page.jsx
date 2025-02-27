@@ -1,9 +1,10 @@
-import Contact from '@/components/Common/Contact/Contact';
-import Compliance from '@/components/Pages/Homepage/Compliance/Compliance';
-import Connect from '@/components/Pages/Homepage/Connect/Connect';
-import Hero from '@/components/Pages/Homepage/Hero/Hero';
-import Tour from '@/components/Pages/Homepage/Tour/Tour';
-import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner/TrustedPartner';
+import Contact from '@/components/Common/Contact';
+import Compliance from '@/components/Pages/Homepage/Compliance';
+import Connect from '@/components/Pages/Homepage/Connect';
+import Hero from '@/components/Pages/Homepage/Hero';
+import Mission from '@/components/Pages/Homepage/Mission';
+import Tour from '@/components/Pages/Homepage/Tour';
+import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner';
 import HeaderFooterView from '@/components/Views/HeaderFooterView';
 
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
         <Compliance />
 
         <Tour />
+
+        <Mission />
 
         <Connect />
 

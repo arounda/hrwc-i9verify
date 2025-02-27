@@ -1,6 +1,6 @@
 'use client';
 
-import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '@/components/Common/ButtonPrimary';
 import Form from '@/components/Pages/ContactUs/Form';
 import { defalutPartnerFormState, defalutSalesFormState, defalutSupportFormState } from '@/constants/formsConstantsUtils';
 import useFormErrorsHook from '@/hooks/formErrorsHook';

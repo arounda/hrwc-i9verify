@@ -1,6 +1,6 @@
-import Contact from '@/components/Common/Contact/Contact';
-import Hero from '@/components/Pages/Integrations/Hero/Hero';
-import Whitelabel from '@/components/Pages/Integrations/Whitelabel/Whitelabel';
+import Contact from '@/components/Common/Contact';
+import Hero from '@/components/Pages/Integrations/Hero';
+import Whitelabel from '@/components/Pages/Integrations/Whitelabel';
 
 const Integrations = () => {
   return (

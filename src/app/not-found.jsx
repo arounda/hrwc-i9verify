@@ -1,6 +1,6 @@
 'use client';
 
-import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '@/components/Common/ButtonPrimary';
 import s from './notFound.module.scss';
 import logo from '@/assets/header-logo-black.svg'
 import Image from 'next/image';

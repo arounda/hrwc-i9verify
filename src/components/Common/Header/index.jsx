@@ -5,11 +5,11 @@ import { clientLoginUrl, newHireLoginUrl } from '@/constants/mainURLs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
-import ButtonSecondary from '../ButtonSecondary/ButtonSecondary';
-import Burger from './Burger/Burger';
+import ButtonPrimary from '../ButtonPrimary';
+import ButtonSecondary from '../ButtonSecondary';
+import Burger from './Burger';
 import s from './header.module.scss';
-import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
+import HeaderNavigation from './HeaderNavigation';
 
 
 const Header = () => {

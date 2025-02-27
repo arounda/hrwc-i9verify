@@ -1,4 +1,4 @@
-import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '@/components/Common/ButtonPrimary';
 
 const SuccessMessage = () => {
   return (

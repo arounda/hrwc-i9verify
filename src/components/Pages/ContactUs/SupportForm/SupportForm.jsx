@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SuccessMessage from '../SuccessMessage/SuccessMessage';
 import s from '../form.module.scss';
 
-import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '@/components/Common/ButtonPrimary';
 import {
   getSupportFormFields,
   handleEmailInputBlur,

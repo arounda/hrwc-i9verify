@@ -1,5 +1,5 @@
-import Footer from '@/components/Common/Footer/Footer';
-import Header from '@/components/Common/Header/Header';
+import Footer from '@/components/Common/Footer';
+import Header from '@/components/Common/Header';
 
 const HeaderFooterView = ({ children }) => {
   return (

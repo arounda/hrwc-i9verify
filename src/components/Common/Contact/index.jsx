@@ -1,6 +1,6 @@
 'use client';
 
-import ButtonPrimary from '@/components/Common/ButtonPrimary/ButtonPrimary';
+import ButtonPrimary from '@/components/Common/ButtonPrimary';
 import s from './contact.module.scss';
 
 const Contact = () => {
