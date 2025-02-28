@@ -1,5 +1,17 @@
 @import '@/styles/utils/mixins';
 
+.hero {
+  padding-top: 14.2rem;
+
+  @include onTablet {
+    padding-top: 16.2rem;
+  }
+
+  @include onLargeDesktop {
+    padding-top: 18rem;
+  }
+}
+
 .heroCards {
   display: grid;
   gap: 1.6rem;

@@ -2,7 +2,7 @@ import s from './hero.module.scss';
 
 const Hero = () => {
   return (
-    <section className='section is-hero'>
+    <section className={`section is-hero ${s.hero}`}>
       <div className="container">
         <h2 className='heading-h2 mb-8'>
           Trusted I-9 / E-Verify Services

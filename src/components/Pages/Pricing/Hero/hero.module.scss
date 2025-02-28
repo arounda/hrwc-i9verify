@@ -1,0 +1,71 @@
+@import '@/styles/utils/mixins';
+
+.heroWrapper,
+.heroHeading,
+.heroProgressWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroWrapper {
+  gap: 3.2rem;
+}
+
+.hero {
+  padding: 16.2rem 0 6.4rem;
+
+  @include onLaptop {
+    padding-bottom: 8.4rem;
+  }
+
+  @include onLargeDesktop {
+    padding-top: 18rem;
+  }
+}
+
+.heroHeading {
+  gap: 1.6rem;
+}
+
+.heroProgressWrapper {
+  gap: 2.4rem;
+}
+
+.heroProgressBarWrapper {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.heroProgressBarBlue,
+.heroProgressBarBase {
+  height: 16px;
+  border-radius: 24px;
+}
+
+.heroProgressBarBlue {
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary);
+  width: 0%;
+}
+
+.heroProgressBarBase {
+  background-color: #F4F5F7;
+}
+
+.heroProgressBarTag {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  padding: 0.8rem 1.6rem;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 24px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
