@@ -42,11 +42,8 @@
   max-width: 610px;
   margin-inline: auto;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1.6rem;
-
-  @include onTablet {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 .solutionsInfoBlockImage {

@@ -23,11 +23,11 @@ const Compliance = () => {
           </div>
 
           <div className={s.complianceImageWrapper}>
-            <Image
+            {/* <Image
               className={s.complianceImageMob}
               src={mapMob}
               alt=''
-            />
+            /> */}
 
             <Image
               className={s.complianceImageDesk}
@@ -36,7 +36,7 @@ const Compliance = () => {
             />
           </div>
 
-          <div className={s.complianceTags}>
+          {/* <div className={s.complianceTags}>
             <div className={s.complianceTag}>
               <Image
                 src={ct1}
@@ -61,7 +61,7 @@ const Compliance = () => {
                 alt=''
               />
             </div>
-          </div>
+          </div> */}
 
           <div className={s.complianceCards}>
             <div className={s.complianceCard}>

@@ -1,8 +1,14 @@
 @import '@/styles/utils/mixins';
 
-.partnerWrapper {
+.partnerWrapper,
+.parnterMain,
+.partnerMainTop,
+.partnerCards {
   display: flex;
   flex-direction: column;
+}
+
+.partnerWrapper {
   gap: 6rem;
 
   @include onLargeDesktop {
@@ -12,8 +18,6 @@
 }
 
 .parnterMain {
-  display: flex;
-  flex-direction: column;
   gap: 2.4rem;
 
   @include onLaptop {
@@ -22,8 +26,6 @@
 }
 
 .partnerMainTop {
-  display: flex;
-  flex-direction: column;
   gap: 2.4rem;
 }
 
@@ -56,8 +58,6 @@
 
 .partnerCards {
   position: relative;
-  display: flex;
-  flex-direction: column;
   gap: 2.4rem;
 
   @include onTablet {
@@ -68,8 +68,15 @@
 }
 
 .partnerCard {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  column-gap: 1.2rem;
+  row-gap: .8rem;
+  align-items: center;
+  grid-template-columns: 24px 1fr;
+
+  @include onTablet {
+    display: block;
+  }
 }
 
 .partnerCardsSeparatorMob {
@@ -107,24 +114,29 @@
 }
 
 .partnerIconWrapper {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  padding: 1.2rem;
-  background-color: var(--white);
-  border-radius: 16px;
-  box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
+  @include onTablet {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    padding: 1.2rem;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
+  }
 }
 
 .partnerHeading {
-  margin-top: 2.4rem;
-  margin-bottom: .8rem;
   color: var(--black);
   font-family: var(--font-gilroy);
   font-size: 2rem;
   font-weight: 600;
   line-height: 150%;
+
+  @include onTablet {
+    margin-top: 2.4rem;
+    margin-bottom: .8rem;
+  }
 }
 
 .partnerText {

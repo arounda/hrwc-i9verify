@@ -18,13 +18,13 @@
   }
 }
 
-.complianceImageDesk {
-  display: none;
+// .complianceImageDesk {
+//   display: none;
 
-  @include onLaptop {
-    display: block;
-  }
-}
+//   @include onLaptop {
+//     display: block;
+//   }
+// }
 
 .complianceTags {
   margin-top: 2.4rem;

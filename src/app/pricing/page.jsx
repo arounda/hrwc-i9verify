@@ -2,7 +2,7 @@ import Contact from '@/components/Common/Contact';
 import Cards from '@/components/Pages/Pricing/Cards';
 import Hero from '@/components/Pages/Pricing/Hero';
 
-const Integrations = () => {
+const Pricing = () => {
   return (
     <>
       <Hero />
@@ -14,4 +14,4 @@ const Integrations = () => {
   )
 };
 
-export default Integrations;
+export default Pricing;
