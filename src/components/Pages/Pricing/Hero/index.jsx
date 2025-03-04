@@ -18,15 +18,15 @@ const CustomThumb = styled('span')(({ theme, ownerState }) => ({
   left: `${ownerState[ 'data-index' ] * 100}%`,
 }));
 
-const Thumb = forwardRef((props, ref) => {
-  const { children, ...other } = props;
-  // console.log(props.val);
-  return (
-    <CustomThumb {...other} ref={ref} tabIndex={0}>
-      {children}
-    </CustomThumb>
-  );
-});
+// const Thumb = forwardRef((props, ref) => {
+//   const { children, ...other } = props;
+//   // console.log(props.val);
+//   return (
+//     <CustomThumb {...other} ref={ref} tabIndex={0}>
+//       {children}
+//     </CustomThumb>
+//   );
+// });
 
 const Hero = () => {
   const [ progressBar, setProgressBar ] = useState(30);
@@ -86,7 +86,7 @@ const Hero = () => {
               onChange={(e) => setProgressBar(e.target.value)}
               slots={{
                 thumb: (props) => (
-                  <Thumb {...props} val={progressBar} />
+                  <CustomThumb {...props} val={progressBar} />
                 ),
               }}
             />
