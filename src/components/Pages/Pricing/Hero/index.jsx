@@ -1,10 +1,35 @@
 'use client';
 
+import { Slider, styled } from '@mui/material';
+import { forwardRef, useState } from 'react';
 import s from './hero.module.scss';
-import { useState } from 'react';
+
+const CustomThumb = styled('span')(({ theme, ownerState }) => ({
+  transform: 'translate(-50%, -50%)',
+  padding: '0.8rem 1.6rem',
+  color: 'var(--white)',
+  backgroundColor: 'var(--primary)',
+  borderRadius: '24px',
+  fontSize: '16px',
+  fontWeight: 400,
+  lineHeight: '150%',
+  position: 'absolute',
+  top: '50%',
+  left: `${ownerState[ 'data-index' ] * 100}%`,
+}));
+
+const Thumb = forwardRef((props, ref) => {
+  const { children, ...other } = props;
+  // console.log(props.val);
+  return (
+    <CustomThumb {...other} ref={ref} tabIndex={0}>
+      {children}
+    </CustomThumb>
+  );
+});
 
 const Hero = () => {
-  const [ progressBar, setProgressBar ] = useState(31);
+  const [ progressBar, setProgressBar ] = useState(30);
 
   return (
     <section className={s.hero}>
@@ -25,22 +50,46 @@ const Hero = () => {
               Number of Monthly New Hires
             </h2>
 
-            <div className={s.heroProgressBarWrapper}>
-              <div className={s.heroProgressBarBase}></div>
-              <div
-                className={s.heroProgressBarBlue}
-                style={{
-                  width: `${progressBar}%`
-                }}
-              ></div>
-              <span
-                className={s.heroProgressBarTag}
-                style={{
-                  left: `${progressBar}%`
-                }}>
-                {progressBar}
-              </span>
-            </div>
+            <Slider
+              defaultValue={30}
+              valueLabelDisplay="on"
+              step={10}
+              sx={{
+                height: '16px',
+                marginInline: 'auto',
+                color: 'var(--primary)',
+                padding: '0px',
+                '& .MuiSlider-thumb': {
+                  '&::before': {
+                    boxShadow: 'none',
+                  },
+                  '&::after': {
+                    width: 'auto',
+                    height: 'auto',
+                    boxShadow: 'none',
+                    color: 'white',
+                    backgroundColor: 'var(--primary)',
+                  },
+                },
+                '& .MuiSlider-rail': {
+                  backgroundColor: '#F4F5F7',
+                  opacity: 1,
+                },
+                '& .MuiSlider-valueLabel': {
+                  fontSize: '1.6rem',
+                  backgroundColor: 'var(--light-blue)',
+                  color: 'var(--primary)',
+                },
+              }}
+              min={10}
+              max={100}
+              onChange={(e) => setProgressBar(e.target.value)}
+              slots={{
+                thumb: (props) => (
+                  <Thumb {...props} val={progressBar} />
+                ),
+              }}
+            />
           </div>
         </div>
       </div>

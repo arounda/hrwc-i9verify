@@ -236,3 +236,12 @@ main {
 .is-medium {
   font-weight: 500;
 }
+
+.MuiPaper-root,
+.MuiAccordionSummary-content {
+  margin: 0 !important;
+}
+
+.MuiPaper-root::before {
+  display: none;
+}

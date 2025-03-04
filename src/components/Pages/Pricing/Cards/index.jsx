@@ -2,6 +2,8 @@
 
 import ButtonPrimary from '@/components/Common/ButtonPrimary';
 import s from './cards.module.scss';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 const Checkmark = () => {
   return (
@@ -19,7 +21,6 @@ const Cross = () => {
       <path d="M7.47567 15.8192C7.1795 16.1088 7.17416 16.5836 7.46374 16.8798C7.75332 17.176 8.22817 17.1813 8.52433 16.8917L7.47567 15.8192ZM16.7063 8.89173C17.0024 8.60215 17.0078 8.1273 16.7182 7.83113C16.4286 7.53497 15.9538 7.52963 15.6576 7.81921L16.7063 8.89173ZM8.52433 16.8917L16.7063 8.89173L15.6576 7.81921L7.47567 15.8192L8.52433 16.8917Z" fill="#0B0B13" />
       <path d="M8.6261 7.74031C8.33652 7.44415 7.86168 7.43881 7.56551 7.72839C7.26934 8.01797 7.264 8.49282 7.55359 8.78898L8.6261 7.74031ZM15.5536 16.9709C15.8432 17.2671 16.318 17.2724 16.6142 16.9828C16.9103 16.6933 16.9157 16.2184 16.6261 15.9222L15.5536 16.9709ZM7.55359 8.78898L15.5536 16.9709L16.6261 15.9222L8.6261 7.74031L7.55359 8.78898Z" fill="#0B0B13" />
     </svg>
-
   )
 }
 
@@ -63,22 +64,56 @@ const features = [
   },
 ];
 
-
 const Cards = () => {
+  const [ isPerYear, setIsPerYear ] = useState(false);
+
   return (
     <section className={s.pricingCardsSection}>
       <div className="container">
         <div className={s.pricingCardsWrapper}>
+          <div className={s.pricingToggle}>
+            <div className={s.pricingToggleWrapper}>
+              <button
+                className={clsx(
+                  `${s.pricingToggleBtn}`,
+                  isPerYear ? '' : `${s.isActivePrice}`
+                )}
+                onClick={() => setIsPerYear(false)}
+              >
+                Pay Monthly
+              </button>
+
+              <button
+                className={clsx(
+                  `${s.pricingToggleBtn}`,
+                  isPerYear ? `${s.isActivePrice}` : ''
+                )}
+                onClick={() => setIsPerYear(true)}
+              >
+                Pay Yearly
+                <span>Save 10%</span>
+              </button>
+            </div>
+          </div>
+
           <div className={s.pricingCards}>
             <div className={s.pricingCard}>
               <h3 className='heading-h4 is-centered'>
                 ei9verify Business Starter
               </h3>
 
-              <p className={s.pricingPrice}>
-                $100
-                <span className={s.pricingPricePer}> per month</span>
-              </p>
+              {isPerYear ? (
+                <p className={s.pricingPrice}>
+                  $500
+                  <span className={s.pricingPricePer}> per year</span>
+                </p>
+              ) : (
+                <p className={s.pricingPrice}>
+                  $100
+                  <span className={s.pricingPricePer}> per month</span>
+                </p>
+              )}
+
 
               <ul className={s.cardList}>
                 {features.map(item => (
@@ -113,10 +148,17 @@ const Cards = () => {
                 ei9verify Growing Businesses
               </h3>
 
-              <p className={s.pricingPrice}>
-                $80
-                <span className={s.pricingPricePer}> per month</span>
-              </p>
+              {isPerYear ? (
+                <p className={s.pricingPrice}>
+                  $760
+                  <span className={s.pricingPricePer}> per year</span>
+                </p>
+              ) : (
+                <p className={s.pricingPrice}>
+                  $80
+                  <span className={s.pricingPricePer}> per month</span>
+                </p>
+              )}
 
               <ul className={s.cardList}>
                 {features.map(item => (

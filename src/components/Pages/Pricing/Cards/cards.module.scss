@@ -8,6 +8,54 @@
   }
 }
 
+.pricingToggle {
+  display: flex;
+  justify-content: center;
+}
+
+.pricingToggleWrapper {
+  padding: 0.4rem;
+  margin-bottom: 3rem;
+  margin-inline: auto;
+  display: inline-flex;
+  border-radius: 100px;
+  background: #F4F5F7;
+}
+
+.pricingToggleBtn {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 1rem 2.4rem;
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 120%;
+
+  & span {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 52px;
+    background: var(--white);
+    color: var(--dark-v2);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: .5;
+  }
+}
+
+.isActivePrice {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 100px;
+
+  & span {
+    color: var(--dark-v2);
+  }
+}
+
 .pricingCards,
 .cardList,
 .pricingCard {
