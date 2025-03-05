@@ -1,6 +1,4 @@
-import Image from 'next/image';
 import s from './whitelabel.module.scss';
-import whitelabelImg from '@/assets/Integrations/whitelabel.png';
 
 const Whitelabel = () => {
   return (
@@ -9,20 +7,12 @@ const Whitelabel = () => {
         <div className={s.whitelabelMain}>
           <div className={s.whitelabelInfo}>
             <h2 className='heading-h2 mb-8'>
-              HRWC White-Label Option
+              White-Label Option
             </h2>
 
             <p className='text'>
               Transform the HRWC system into your own branded solution by utilizing our white-label option. Customize both the employee-facing portal and manager portal to offer a seamless and fully customized HR experience to your clients or internal team.
             </p>
-          </div>
-
-          <div className={s.whitelabelImageWrapper}>
-            <Image
-              className={s.whitelabelImage}
-              src={whitelabelImg}
-              alt=''
-            />
           </div>
         </div>
 
