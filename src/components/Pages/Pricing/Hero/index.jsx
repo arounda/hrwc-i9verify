@@ -1,32 +1,8 @@
 'use client';
 
-import { Slider, styled } from '@mui/material';
-import { forwardRef, useState } from 'react';
+import { Slider } from '@mui/material';
+import { useState } from 'react';
 import s from './hero.module.scss';
-
-const CustomThumb = styled('span')(({ theme, ownerState }) => ({
-  transform: 'translate(-50%, -50%)',
-  padding: '0.8rem 1.6rem',
-  color: 'var(--white)',
-  backgroundColor: 'var(--primary)',
-  borderRadius: '24px',
-  fontSize: '16px',
-  fontWeight: 400,
-  lineHeight: '150%',
-  position: 'absolute',
-  top: '50%',
-  left: `${ownerState[ 'data-index' ] * 100}%`,
-}));
-
-// const Thumb = forwardRef((props, ref) => {
-//   const { children, ...other } = props;
-//   // console.log(props.val);
-//   return (
-//     <CustomThumb {...other} ref={ref} tabIndex={0}>
-//       {children}
-//     </CustomThumb>
-//   );
-// });
 
 const Hero = () => {
   const [ progressBar, setProgressBar ] = useState(30);
@@ -56,6 +32,7 @@ const Hero = () => {
               step={10}
               sx={{
                 height: '16px',
+                maxWidth: '800px',
                 marginInline: 'auto',
                 color: 'var(--primary)',
                 padding: '0px',
@@ -77,18 +54,23 @@ const Hero = () => {
                 },
                 '& .MuiSlider-valueLabel': {
                   fontSize: '1.6rem',
-                  backgroundColor: 'var(--light-blue)',
-                  color: 'var(--primary)',
+                  backgroundColor: 'var(--primary)',
+                  color: 'var(--white)',
+                  borderRadius: '24px',
+                  padding: '0.8rem 1.6rem',
+                  fontSize: '16px',
+                  fontWeight: 400,
+                  lineHeight: '150%',
+                  transform: 'translateY(0%) !important',
+                  WebkitTransform: 'translateY(0%) !important',
+                  '&::before': {
+                    display: 'none'
+                  }
                 },
               }}
               min={10}
               max={100}
               onChange={(e) => setProgressBar(e.target.value)}
-              slots={{
-                thumb: (props) => (
-                  <CustomThumb {...props} val={progressBar} />
-                ),
-              }}
             />
           </div>
         </div>
