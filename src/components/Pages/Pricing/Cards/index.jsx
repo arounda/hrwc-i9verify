@@ -4,6 +4,7 @@ import ButtonPrimary from '@/components/Common/ButtonPrimary';
 import s from './cards.module.scss';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { pricingFeatures, prices } from '@/constants/pricingPageData';
 
 const Checkmark = () => {
   return (
@@ -24,48 +25,15 @@ const Cross = () => {
   )
 }
 
-const features = [
-  {
-    title: 'Up to 2 user licenses',
-  },
-  {
-    title: 'Digital Form I-9s',
-  },
-  {
-    title: 'Remote Verification Capabilities',
-  },
-  {
-    title: 'Reverification Management',
-  },
-  {
-    title: 'Comprehensive Reports and Analytics',
-  },
-  {
-    title: 'Real Time Alerts and Notifications',
-  },
-  {
-    title: 'Audit Trial',
-  },
-  {
-    title: 'Single Sign On',
-    isGrowing: true,
-  },
-  {
-    title: 'Instructor Training',
-    isGrowing: true,
-  },
-  {
-    title: 'Onboarding Support',
-    isEnterprise: true,
-  },
-  {
-    title: 'Dedicated Email, Chat and Phone Support',
-    isEnterprise: true,
-  },
-];
-
-const Cards = () => {
+const Cards = ({ employeesAmount }) => {
   const [ isPerYear, setIsPerYear ] = useState(false);
+
+  const getPerYear = (perMonth) => {
+    const perYear = Number(perMonth) * 12;
+    const tenPercent = perYear * 0.1;
+
+    return perYear - tenPercent;
+  };
 
   return (
     <section className={s.pricingCardsSection}>
@@ -104,19 +72,19 @@ const Cards = () => {
 
               {isPerYear ? (
                 <p className={s.pricingPrice}>
-                  $500
+                  {`$${getPerYear(prices.starter[employeesAmount])}`}
                   <span className={s.pricingPricePer}> per year</span>
                 </p>
               ) : (
                 <p className={s.pricingPrice}>
-                  $100
+                  {`$${prices.starter[employeesAmount]}`}
                   <span className={s.pricingPricePer}> per month</span>
                 </p>
               )}
 
 
               <ul className={s.cardList}>
-                {features.map(item => (
+                {pricingFeatures.map(item => (
                   <li
                     key={item.title}
                     className={s.cardListItem}
@@ -150,18 +118,18 @@ const Cards = () => {
 
               {isPerYear ? (
                 <p className={s.pricingPrice}>
-                  $760
+                  {`$${getPerYear(prices.growing[employeesAmount])}`}
                   <span className={s.pricingPricePer}> per year</span>
                 </p>
               ) : (
                 <p className={s.pricingPrice}>
-                  $80
+                  {`$${prices.growing[employeesAmount]}`}
                   <span className={s.pricingPricePer}> per month</span>
                 </p>
               )}
 
               <ul className={s.cardList}>
-                {features.map(item => (
+                {pricingFeatures.map(item => (
                   <li
                     key={item.title}
                     className={s.cardListItem}
@@ -196,7 +164,7 @@ const Cards = () => {
               </h4>
 
               <ul className={s.cardList}>
-                {features.map(item => (
+                {pricingFeatures.map(item => (
                   <li
                     key={item.title}
                     className={s.cardListItem}

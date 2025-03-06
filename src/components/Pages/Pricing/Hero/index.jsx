@@ -1,11 +1,7 @@
-'use client';
-
 import { Slider } from '@mui/material';
-import { useState } from 'react';
 import s from './hero.module.scss';
 
-const Hero = () => {
-  const [ progressBar, setProgressBar ] = useState(30);
+const Hero = ({ employeesAmount, setEmployeesAmount }) => {
 
   return (
     <section className={s.hero}>
@@ -27,11 +23,12 @@ const Hero = () => {
             </h2>
 
             <Slider
-              defaultValue={30}
+              defaultValue={employeesAmount}
               valueLabelDisplay="on"
               step={10}
               sx={{
                 height: '16px',
+                width: '90%',
                 maxWidth: '800px',
                 marginInline: 'auto',
                 color: 'var(--primary)',
@@ -70,13 +67,13 @@ const Hero = () => {
               }}
               min={10}
               max={100}
-              onChange={(e) => setProgressBar(e.target.value)}
+              onChange={(e) => setEmployeesAmount(e.target.value)}
             />
           </div>
         </div>
       </div>
     </section>
   )
-}
+};
 
-export default Hero
+export default Hero;
