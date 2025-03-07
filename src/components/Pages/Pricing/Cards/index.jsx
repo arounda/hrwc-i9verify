@@ -28,12 +28,18 @@ const Cross = () => {
 const Cards = ({ employeesAmount }) => {
   const [ isPerYear, setIsPerYear ] = useState(false);
 
-  const getPerYear = (perMonth) => {
-    const perYear = Number(perMonth) * 12;
-    const tenPercent = perYear * 0.1;
+  const getPrice = (plan) => {
+    const pricePerMonth = prices[plan][employeesAmount];
 
-    return perYear - tenPercent;
+    const perYear = Number(pricePerMonth) * 12;
+    const percent = perYear * 0.1;
+    const perYearTotal = perYear - percent;
+
+    return isPerYear ? perYearTotal : pricePerMonth;
   };
+
+  const starterPrice = getPrice('starter');
+  const growingPrice = getPrice('growing');
 
   return (
     <section className={s.pricingCardsSection}>
@@ -72,16 +78,15 @@ const Cards = ({ employeesAmount }) => {
 
               {isPerYear ? (
                 <p className={s.pricingPrice}>
-                  {`$${getPerYear(prices.starter[employeesAmount])}`}
+                  {`$${starterPrice}`}
                   <span className={s.pricingPricePer}> per year</span>
                 </p>
               ) : (
                 <p className={s.pricingPrice}>
-                  {`$${prices.starter[employeesAmount]}`}
+                  {`$${starterPrice}`}
                   <span className={s.pricingPricePer}> per month</span>
                 </p>
               )}
-
 
               <ul className={s.cardList}>
                 {pricingFeatures.map(item => (
@@ -118,12 +123,12 @@ const Cards = ({ employeesAmount }) => {
 
               {isPerYear ? (
                 <p className={s.pricingPrice}>
-                  {`$${getPerYear(prices.growing[employeesAmount])}`}
+                  {`$${growingPrice}`}
                   <span className={s.pricingPricePer}> per year</span>
                 </p>
               ) : (
                 <p className={s.pricingPrice}>
-                  {`$${prices.growing[employeesAmount]}`}
+                  {`$${growingPrice}`}
                   <span className={s.pricingPricePer}> per month</span>
                 </p>
               )}

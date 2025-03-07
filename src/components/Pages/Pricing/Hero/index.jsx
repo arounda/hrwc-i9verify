@@ -23,7 +23,7 @@ const Hero = ({ employeesAmount, setEmployeesAmount }) => {
             </h2>
 
             <Slider
-              defaultValue={employeesAmount}
+              defaultValue={20}
               valueLabelDisplay="on"
               step={10}
               sx={{
@@ -43,6 +43,9 @@ const Hero = ({ employeesAmount, setEmployeesAmount }) => {
                     boxShadow: 'none',
                     color: 'white',
                     backgroundColor: 'var(--primary)',
+                  },
+                  '&.Mui-active': {
+                    boxShadow: 'none',
                   },
                 },
                 '& .MuiSlider-rail': {
