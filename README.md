@@ -4,7 +4,7 @@
 
 * Open bash/zsh terminal
 * In the terminal, navigate to the folder on your computer where you will clone the project.
-* Inside the folder run this command: ```git clone https://github.com/arounda/hr-workcycles.git```
+* Inside the folder run this command: ```git clone https://github.com/arounda/hrwc-i9verify.git```
 * (Optional) To open the project in your code editor of choice run ```code hr-workcycles```
 * In terminal Navigate to the project folder using this command: ```cd hr-workcycles```
 * Inside the folder run ```npm i```
