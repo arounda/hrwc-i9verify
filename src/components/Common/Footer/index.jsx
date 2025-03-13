@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           <p className={s.footerCopyright}>
-            © 2025 TAXCREDITSERVICES
+            © 2025 I-9 / E-Verify®
           </p>
 
           <p className={s.footerSlogan}>
